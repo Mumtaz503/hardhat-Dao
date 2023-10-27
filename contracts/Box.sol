@@ -9,8 +9,6 @@ contract Box is Ownable {
 
     event ValueChanged(uint256 newValue);
 
-    constructor() Ownable(msg.sender) {}
-
     function store(uint256 _newValue) public onlyOwner {
         value = _newValue;
         emit ValueChanged(_newValue);
